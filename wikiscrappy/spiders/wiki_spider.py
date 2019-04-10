@@ -25,9 +25,7 @@ class WikiSpiderSpider(scrapy.Spider):
             month = day.group(1)
             day = day.group(2)
 
-            #print ('month : ' + str(month) + ' day:'+ str(day))
             items ['day'] = day
             items ['month'] = month
             items ['urlx'] = next_url
             yield items
-            #yield response.follow(next_url, callback=self.parse)
